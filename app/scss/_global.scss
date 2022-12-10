@@ -55,11 +55,23 @@ a {
   color: $blueColor;
 }
 
-%ellipse{
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: $grayColor;
+}
+
+%ellipse {
   display: -webkit-box !important;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: normal;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+%center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
