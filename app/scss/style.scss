@@ -1,0 +1,264 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+.header {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  color: $titleColor;
+  &__inner {
+    display: flex;
+    height: 80px;
+    align-items: center;
+  }
+  &__signup {
+    color: $white;
+    background-color: $blueColor;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-left: 48px;
+    &:hover {
+      color: $white;
+      opacity: 0.9;
+    }
+  }
+}
+
+.nav {
+  flex: 1;
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__list-item + li {
+    margin-left: 40px;
+  }
+}
+
+.footer {
+  background-color: $titleColor;
+  padding: 60px 0 80px;
+  color: $white;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__main {
+    max-width: 240px;
+  }
+  &__img {
+    margin-bottom: 20px;
+  }
+  &__desc {
+    margin-bottom: 17px;
+    line-height: 1.56;
+  }
+  &__social {
+    display: flex;
+  }
+  &__social-item {
+    margin-right: 20px;
+  }
+  &__social-link {
+    svg {
+      path {
+        transition: all 0.3s ease-in;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: $blueColor;
+        }
+      }
+    }
+  }
+  &__links {
+    display: flex;
+    padding-top: 20px;
+  }
+  &__list + ul {
+    margin-left: 90px;
+  }
+  &__list-title {
+    margin-bottom: 20px;
+    h4 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: $white;
+    }
+  }
+  &__list-item {
+    margin-bottom: 10px;
+  }
+}
+
+.top {
+  background-color: #70e6e8;
+  background-image: url("../images/top-bg.svg");
+  background-repeat: no-repeat;
+  background-position: top -80px right;
+  background-size: contain;
+  &__inner {
+    padding-top: 77px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__about {
+    padding-top: 30px;
+    max-width: 592px;
+  }
+  &__subtitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: $blueColor;
+    margin-bottom: 10px;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 72px;
+    color: $titleColor;
+    margin-bottom: 20px;
+  }
+  &__desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #3e3a71;
+    margin-bottom: 40px;
+  }
+  &__btn {
+    margin-bottom: 40px;
+  }
+
+  &__app {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #000000;
+    box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.14);
+    border-radius: 8px;
+  }
+
+  &__img {
+    max-width: 619px;
+    margin-right: -40px;
+  }
+}
+
+.popular {
+  padding: 80px 0;
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .card {
+    margin-bottom: 80px;
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+}
+.card {
+  display: grid;
+  grid-template-columns: repeat(4, 285px);
+  grid-gap: 20px;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 285px;
+    background: $white;
+    border: 1px solid #efeeef;
+    border-radius: 10px;
+    padding-bottom: 13px;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.1);
+    }
+  }
+  &__desc-box {
+    padding: 11px 12px 26px 12px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $titleColor;
+    margin-bottom: 10px;
+    @extend %ellipse;
+  }
+  &__desc {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8296b0;
+    height: 34px;
+    @extend %ellipse;
+  }
+  &__time-box,
+  &__price-box {
+    padding: 0 12px;
+    display: flex;
+    img {
+      display: inline-block;
+    }
+  }
+  &__time-box {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #a5a5a4;
+    padding-bottom: 19px;
+    border-bottom: 1px solid #efeeef;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $titleColor;
+  }
+  &__time,
+  &__lessons,
+  &__rating,
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+  &__time,
+  &__lessons {
+    margin-right: 10px;
+    img {
+      margin-right: 7px;
+    }
+  }
+  &__rating,
+  &__user {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: $titleColor;
+    img {
+      margin-right: 2px;
+    }
+  }
+  &__rating {
+    margin-left: auto;
+    margin-right: 11px;
+  }
+}
+
+@import "media";
